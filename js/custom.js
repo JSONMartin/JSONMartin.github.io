@@ -5,7 +5,7 @@
 
 /*************** GOOGLE ANALYTICS ***********/
 /*************** REPLACE WITH YOUR OWN UA NUMBER ***********/
-window.onload = function () { "use strict"; gaSSDSLoad(""); }; //load after page onload
+// window.onload = function () { "use strict"; gaSSDSLoad(""); }; //load after page onload
 /*************** REPLACE WITH YOUR OWN UA NUMBER ***********/
 
 
@@ -13,7 +13,7 @@ window.onload = function () { "use strict"; gaSSDSLoad(""); }; //load after page
 |--------------------------------------------------------------------------
 | DOCUMENT READY
 |--------------------------------------------------------------------------
-*/  
+*/
 
 $(document).ready(function() {
     "use strict";
@@ -29,7 +29,7 @@ $(document).ready(function() {
     {
         fullscreenImage();
     }
-    
+
     $(window).scroll(function() {
 
         if ($('#fullScreen').length)
@@ -74,7 +74,7 @@ $(document).ready(function() {
             })
         });
 
-    }			
+    }
     /*
     |--------------------------------------------------------------------------
     | MAGNIFIC POPUP
@@ -88,7 +88,7 @@ $(document).ready(function() {
          $("a.image-link").click(function (e) {
 
             var items = [];
-            
+
             items.push( { src: $(this).attr('href')  } );
 
             if($(this).data('gallery')){
@@ -97,23 +97,23 @@ $(document).ready(function() {
 
                 $.each( $arraySrc, function( i, v ){
                     items.push( {
-                        src: v 
+                        src: v
                     });
-                });     
+                });
             }
-     
+
             $.magnificPopup.open({
                 type:'image',
                 mainClass: 'mfp-fade',
                 items:items,
                 gallery: {
-                  enabled: true 
+                  enabled: true
                 }
             });
 
             e.preventDefault();
         });
-  
+
     }
 
 
@@ -122,7 +122,7 @@ $(document).ready(function() {
          $('a.image-iframe').magnificPopup({type:'iframe',mainClass: 'mfp-fade'});
     }
 
-    
+
     /*
     |--------------------------------------------------------------------------
     | TOOLTIP
@@ -131,8 +131,8 @@ $(document).ready(function() {
 
     $('.tips').tooltip({placement:'top'});
 
-    
-    
+
+
     /*
     |--------------------------------------------------------------------------
     | COLLAPSE
@@ -143,14 +143,14 @@ $(document).ready(function() {
         $('.accordion-toggle').removeClass('active');
         $(e.target).siblings('.accordion-heading').find('.accordion-toggle').addClass('active');
         $(e.target).siblings('.accordion-heading').find('.accordion-toggle i').toggleClass('icon-plus icon-minus', 200);
-        
+
     });
 
     /*
     |--------------------------------------------------------------------------
     | CONTACT
     |--------------------------------------------------------------------------
-    */   
+    */
     $('.slideContact').click(function(e){
 
         if ( $(window).width() >= 800){
@@ -160,21 +160,21 @@ $(document).ready(function() {
                 $('#contactinfoWrapper').css('margin-left', 0);
                 $('#mapSlideWrapper').css('margin-left', 3000);
                 $('#contactinfoWrapper').fadeToggle();
-                
+
 
             });
-            $('#closeContact').fadeToggle(); 
+            $('#closeContact').fadeToggle();
             return false;
-            
+
         }else{
 
             return true;
-            
+
         }
         e.preventDefault();
     });
-    
-    
+
+
     $('#closeContact').click(function(e){
 
 
@@ -182,109 +182,109 @@ $(document).ready(function() {
             $('#contactinfoWrapper').css('margin-left', 0);
             $('#mapSlideWrapper').css('margin-left', 3000);
         });
-        
+
         $('#contact').slideUp('normal', 'easeOutQuad');
 
         $(this).fadeOut();
 
         e.preventDefault();
-        
+
     });
-    
 
 
 
-    
-    
+
+
+
     /* MAP */
     $('#mapTrigger').click(function(e){
 
 
         $('#mapSlideWrapper').css('display', 'block');
         initialize('mapWrapper');
-        
+
         $('#contactinfoWrapper, #contactinfoWrapperPage').animate({
-            marginLeft:'-2000px' 
-        }, 400, function() {}); 
-        
-        
+            marginLeft:'-2000px'
+        }, 400, function() {});
+
+
         $('#mapSlideWrapper').animate({
-            marginLeft:'25px' 
-        }, 400, function() {});  
-        
-        appendBootstrap();
+            marginLeft:'25px'
+        }, 400, function() {});
+
+        //appendBootstrap();
 
         e.preventDefault();
     });
 
-    appendBootstrap();
-    
-    
+    //appendBootstrap();
+
+
     $('#mapTriggerLoader').click(function(e){
 
 
         $('#mapSlide').css('display', 'block');
 
         $('#contactSlide').animate({
-            marginLeft:'-2000px' 
-        }, 400, function() {}); 
-        
-        
+            marginLeft:'-2000px'
+        }, 400, function() {});
+
+
         $('#mapSlide').animate({
-            marginLeft:'0' 
+            marginLeft:'0'
         }, 400, function() {
             $('#contactSlide').css('display', 'none');
-        });  
+        });
 
-        
-        appendBootstrap();
-        
+
+        //appendBootstrap();
+
         e.preventDefault();
     });
-    
-    
+
+
     $('#mapReturn').click(function(e){
         //$('#mapWrapper').css('margin-bottom', '3em');
-        
+
         $('#contactSlide').css('display', 'block');
         $('#mapSlide').animate({
-            marginLeft:'3000px' 
-        }, 400, function() {});       
-        
+            marginLeft:'3000px'
+        }, 400, function() {});
+
 
         $('#contactSlide').animate({
-            marginLeft:'0' 
+            marginLeft:'0'
         }, 400, function() {
             $('#mapSlide').css('display', 'none');
-        }); 
+        });
 
         e.preventDefault();
-    }); 
+    });
 
     /*
     |--------------------------------------------------------------------------
     | OWL CAROUSEL
     |--------------------------------------------------------------------------
     */
-     if($('#portfolio-carousel').length){ 
-     alert('toto');    
+     if($('#portfolio-carousel').length){
+     alert('toto');
         $("#portfolio-carousel").owlCarousel();
     }
     /*
     |--------------------------------------------------------------------------
     | FLEXSLIDER
     |--------------------------------------------------------------------------
-    */ 
+    */
     if($('#flexHome').length){
 
         $('#flexHome').flexslider({
             animation: "slide",
             controlNav:true,
-            directionNav:false, 
+            directionNav:false,
             touch: true,
             direction: "vertical"
-      
-        });    
+
+        });
     }
 
 
@@ -296,17 +296,17 @@ $(document).ready(function() {
             directionNav: true,
             slideshow: true,
             touch: true,
-            prevText: '<i class="icon-left-open"></i>',           
-            nextText: '<i class="icon-right-open"></i>',   
+            prevText: '<i class="icon-left-open"></i>',
+            nextText: '<i class="icon-right-open"></i>',
             start: function(slider){
-                setTimeout("animateTxt("+slider.currentSlide+", 'in')", 100);  
+                setTimeout("animateTxt("+slider.currentSlide+", 'in')", 100);
             },
             before: function(slider){
-                setTimeout("animateTxt("+slider.currentSlide+")", 100);  
+                setTimeout("animateTxt("+slider.currentSlide+")", 100);
             },
             after: function(slider){
-                setTimeout("animateTxt("+slider.currentSlide+", 'in')", 100);  
-            } 
+                setTimeout("animateTxt("+slider.currentSlide+", 'in')", 100);
+            }
         });
 
     }
@@ -317,11 +317,11 @@ $(document).ready(function() {
         $('.flexScreenSlider').flexslider({
             animation: "slide",
             controlNav:false,
-            touch: true, 
+            touch: true,
             slideshow: true,
-            prevText: '<i class="icon-left-open"></i>',           
-            nextText: '<i class="icon-right-open"></i>'  
-        });    
+            prevText: '<i class="icon-left-open"></i>',
+            nextText: '<i class="icon-right-open"></i>'
+        });
     }
 
 
@@ -332,9 +332,9 @@ $(document).ready(function() {
             controlNav:false,
             touch: true,
             slideshow: true,
-            prevText: '<i class="icon-left-open"></i>',           
-            nextText: '<i class="icon-right-open"></i>'  
-        });    
+            prevText: '<i class="icon-left-open"></i>',
+            nextText: '<i class="icon-right-open"></i>'
+        });
     }
 
 
@@ -345,20 +345,20 @@ $(document).ready(function() {
             controlNav:true,
             touch: true,
             slideshow: true,
-            prevText: '<i class="icon-left-open"></i>',           
-            nextText: '<i class="icon-right-open"></i>'  
-        });    
+            prevText: '<i class="icon-left-open"></i>',
+            nextText: '<i class="icon-right-open"></i>'
+        });
     }
-	
+
 	 if($('.flexApp').length){
 
         $('.flexApp').flexslider({
             animation: "slide",
             controlNav:false,
-            touch: true,	
-            prevText: '<i class="icon-left-open"></i>',           
-            nextText: '<i class="icon-right-open"></i>'  
-        });    
+            touch: true,
+            prevText: '<i class="icon-left-open"></i>',
+            nextText: '<i class="icon-right-open"></i>'
+        });
     }
 
 
@@ -369,7 +369,7 @@ $(document).ready(function() {
     |--------------------------------------------------------------------------
     | MAIN ROLLOVER EFFECTS
     |--------------------------------------------------------------------------
-    */     
+    */
 
     if($('.imgHover').length){
 
@@ -381,7 +381,7 @@ $(document).ready(function() {
                 var fromTop = ($('.imgWrapper', $this).height()/2 - $('.iconLinks', $this).height()/2);
                 $('.iconLinks', $this).css('margin-top',fromTop);
 
-                $('.mediaHover', $this).height($('.imgWrapper', $this).height());   
+                $('.mediaHover', $this).height($('.imgWrapper', $this).height());
 
                 $('.mask', this).css('height', $('.imgWrapper', this).height());
                 $('.mask', this).css('width', $('.imgWrapper', this).width());
@@ -395,8 +395,8 @@ $(document).ready(function() {
                         $('.iconLinks a').addClass('animated');
 
 
-                        $('.iconLinks a', $this).removeClass('flipOutX'); 
-                        $('.iconLinks a', $this).addClass('bounceInDown'); 
+                        $('.iconLinks a', $this).removeClass('flipOutX');
+                        $('.iconLinks a', $this).addClass('bounceInDown');
 
                     }else{
 
@@ -416,8 +416,8 @@ $(document).ready(function() {
                 $('.mask', this).stop(1).show().animate({marginTop: $('.imgWrapper', $this).height()},200, function() {
 
                     if(Modernizr.csstransitions) {
-                        $('.iconLinks a', $this).removeClass('bounceInDown'); 
-                        $('.iconLinks a', $this).addClass('flipOutX'); 
+                        $('.iconLinks a', $this).removeClass('bounceInDown');
+                        $('.iconLinks a', $this).addClass('flipOutX');
 
                     }else{
                         $('.iconLinks', $this).stop(true, false).fadeOut('fast');
@@ -434,7 +434,7 @@ $(document).ready(function() {
     |--------------------------------------------------------------------------
     | ROLLOVER BTN
     |--------------------------------------------------------------------------
-    */ 
+    */
 
     $('.socialIcon').hover(
         function () {
@@ -462,18 +462,18 @@ $(document).ready(function() {
     |--------------------------------------------------------------------------
     | ALERT
     |--------------------------------------------------------------------------
-    */ 
+    */
     $('.alert').delegate('button', 'click', function() {
         $(this).parent().fadeOut('fast');
     });
-    
-    
+
+
     /*
     |--------------------------------------------------------------------------
     | CLIENT
     |--------------------------------------------------------------------------
-    */   
-    
+    */
+
     if($('.colorHover').length){
         var array =[];
         $('.colorHover').hover(
@@ -483,7 +483,7 @@ $(document).ready(function() {
                 array[0] = $(this).attr('src');
                 $(this).attr('src', $(this).attr('src').replace('-off', ''));
 
-            }, 
+            },
 
             function () {
 
@@ -498,19 +498,19 @@ $(document).ready(function() {
     |--------------------------------------------------------------------------
     | Rollover boxIcon
     |--------------------------------------------------------------------------
-    */ 
+    */
     if($('.boxIcon').length){
 
         $('.boxIcon').hover(function() {
             var $this = $(this);
 
-            $this.css('opacity', '1');   
+            $this.css('opacity', '1');
             //$this.find('.boxContent>p').stop(true, false).css('opacity', 0);
             $this.addClass('hover');
             $('.boxContent>p').css('bottom', '-50px');
             $this.find('.boxContent>p').stop(true, false).css('display', 'block');
 
-            $this.find('.iconWrapper i').addClass('triggeredHover');    
+            $this.find('.iconWrapper i').addClass('triggeredHover');
 
             $this.find('.boxContent>p').stop(true, false).animate({
                 'margin-top': '0px'},
@@ -525,11 +525,11 @@ $(document).ready(function() {
 
             $this.find('.boxContent>p').stop(true, false).css('display', 'none');
             $this.find('.boxContent>p').css('margin-top', '250px');
-            $this.find('.iconWrapper i').removeClass('triggeredHover'); 
+            $this.find('.iconWrapper i').removeClass('triggeredHover');
 
 
-        });   
-    }   
+        });
+    }
 
 
 
@@ -565,7 +565,7 @@ $(document).ready(function() {
 |--------------------------------------------------------------------------
 */
 if($('#shareme').length){
-  
+
     $('#shareme').sharrre({
 
     share: {
@@ -587,7 +587,7 @@ if($('#shareme').length){
     enableTracking: true,
       //url:'document.location.href'
   });
-} 
+}
 
 
 
@@ -612,20 +612,20 @@ if($('.previewTrigger').length){
         if(Modernizr.csstransitions) {
             $('.iconWrapper', $this).addClass('animated');
             $('.iconWrapper', $this).css('display', 'block');
-            $('.iconWrapper', $this).removeClass('flipOutX'); 
-            $('.iconWrapper', $this).addClass('bounceInDown'); 
+            $('.iconWrapper', $this).removeClass('flipOutX');
+            $('.iconWrapper', $this).addClass('bounceInDown');
         }else{
             $('.iconWrapper', $this).stop(true, false).fadeIn('fast');
         }
 
     }, function() {
 
-        var $this = $(this); 
+        var $this = $(this);
 
         $this.children('.mask').fadeOut('fast');
 
         if(Modernizr.csstransitions) {
-            $('.iconWrapper', $this).removeClass('bounceInDown'); 
+            $('.iconWrapper', $this).removeClass('bounceInDown');
             $('.iconWrapper', $this).addClass('flipOutX');
             $('.iconWrapper', $this).css('display', 'none');
             $('.iconWrapper', $this).removeClass('animated');
@@ -666,7 +666,7 @@ $('.nav a').on('click', function(){
 
 });
 
-//END DOCUMENT READY   
+//END DOCUMENT READY
 });
 
 
@@ -683,7 +683,7 @@ $(window).load(function() {
     |--------------------------------------------------------------------------
     | PRELOADER
     |--------------------------------------------------------------------------
-    */ 
+    */
     $('#status').fadeOut(); // will first fade out the loading animation
     $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
     $('body').delay(350).css({'overflow':'visible'});
@@ -692,13 +692,13 @@ $(window).load(function() {
     |--------------------------------------------------------------------------
     | ISOTOPE USAGE FILTERING
     |--------------------------------------------------------------------------
-    */ 
+    */
     if($('.isotopeWrapper').length){
 
         var $container = $('.isotopeWrapper');
         var $resize = $('.isotopeWrapper').attr('id');
         // initialize isotope
-        
+
         $container.isotope({
             itemSelector: '.isotopeItem',
             resizable: false, // disable normal resizing
@@ -707,7 +707,7 @@ $(window).load(function() {
             }
 
 
-            
+
         });
         var rightHeight = $('#works').height();
         $('#filter a').click(function(){
@@ -729,8 +729,8 @@ $(window).load(function() {
             });
             return false;
         });
-        
-        
+
+
         $(window).smartresize(function(){
             $container.isotope({
                 // update columnWidth to a percentage of container width
@@ -739,9 +739,9 @@ $(window).load(function() {
                 }
             });
         });
-        
 
-}  
+
+}
 
 
 /**PROCESS ICONS**/
@@ -753,13 +753,13 @@ $('.iconBoxV3 a').hover(function() {
         $('i', this).css('-webkit-transform', 'rotateZ(360deg)');
         $('i', this).css('-moz-transform', 'rotateZ(360deg)');
         $('i', this).css('-o-transform', 'rotateZ(360deg)');
-        $('i', this).css('transform', 'rotateZ(360deg)'); 
+        $('i', this).css('transform', 'rotateZ(360deg)');
 
     }else{
 
        $(this).stop(false, true).toggleClass( 'hover', 150);
 
-   }  
+   }
 
 }, function() {
 
@@ -768,20 +768,20 @@ $('.iconBoxV3 a').hover(function() {
         $('i', this).css('-webkit-transform', 'rotateZ(0deg)');
         $('i', this).css('-moz-transform', 'rotateZ(0deg)');
         $('i', this).css('-o-transform', 'rotateZ(0deg)');
-        $('i', this).css('transform', 'rotateZ(0deg)'); 
+        $('i', this).css('transform', 'rotateZ(0deg)');
 
     }else{
 
         $(this).stop(false, true).toggleClass( 'hover', 150);
-    }  
-    
+    }
+
 });
 
 
 if($('.scrollMenu').length){
 
 
-        if($('.localscroll').length){    
+        if($('.localscroll').length){
             $('.localscroll').localScroll({
                 lazy: true,
                 offset: {
@@ -796,7 +796,7 @@ if($('.scrollMenu').length){
             isMobile = true;
         }
 
-       
+
         if (isMobile === false && ($('#paralaxSlice1').length  ||isMobile === false &&  $('#paralaxSlice2').length ))
         {
 
@@ -812,7 +812,7 @@ if($('.scrollMenu').length){
             });
 
         }
-  
+
 
     }
 
@@ -890,7 +890,7 @@ jQuery(function() {
         },
         onkeyup: false,
 
-        
+
         rules: {
             name: {
                 required: true,
@@ -934,7 +934,7 @@ function animateTxt(curSlide, action){
         $('.slideN'+curSlide+':not([class*=clone])>.caption').css('display', 'block');
 
         $('.slideN'+curSlide+':not([class*=clone])>.caption>div').each(function( ) {
-            if(Modernizr.csstransitions) { 
+            if(Modernizr.csstransitions) {
 
                 $(this).css('-webkit-animation-delay', animaDelay+'s');
                 $(this).css('-moz-animation-delay', animaDelay+'s');
@@ -967,7 +967,7 @@ function animateTxt(curSlide, action){
         $('.slideN'+curSlide+':not([class*=clone])>.caption').css('display', 'none');
 
         $('.slideN'+curSlide+':not([class*=clone])>.caption>div').each(function( ) {
-         if(Modernizr.csstransitions) { 
+         if(Modernizr.csstransitions) {
 
              $(this).removeClass($(this).attr('data-animation')).removeClass('animated').hide();
 
@@ -990,286 +990,284 @@ function animateTxt(curSlide, action){
 |--------------------------------------------------------------------------
 */
 
-function appendBootstrap() {
-    "use strict";
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
-    document.body.appendChild(script);
-}    
+// function appendBootstrap() {
+//     "use strict";
+//     var script = document.createElement("script");
+//     script.type = "text/javascript";
+//     script.src = "http://maps.google.com/maps/api/js?sensor=false&callback=initialize";
+//     document.body.appendChild(script);
+// }
 
-
-
-
-function initialize(id) {
-    "use strict";
-    var image = 'images/icon-map.png';
-
-    var overlayTitle = 'Agencies';
-
-    var locations = [
-        //point number 1
-        ['Madison Square Garden', '4 Pennsylvania Plaza, New York, NY'],
-
-        //point number 2
-        ['Best town ever', 'Santa Cruz', 36.986021, -122.02216399999998],
-
-        //point number 3 
-        ['Located in the Midwestern United States', 'Kansas'],
-
-        //point number 4
-        ['I\'ll definitly be there one day', 'Chicago', 41.8781136, -87.62979819999998] 
-    ];
-
-/*** DON'T CHANGE ANYTHING PASSED THIS LINE ***/
-id = (id === undefined) ? 'mapWrapper' : id;
-
-var map = new google.maps.Map(document.getElementById(id), {
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false,
-    zoomControl: true,
-    zoomControlOptions: {
-        style: google.maps.ZoomControlStyle.LARGE,
-        position: google.maps.ControlPosition.LEFT_CENTER
-    },
-    streetViewControl:true,
-    scaleControl:false,
-    zoom: 14,
-     styles:[
-    {
-        "featureType": "water",
-        "stylers": [
-            {
-                "color": "#6196AD"
-            },
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.fill",
-        "stylers": [
-             {
-                "color": "#FCFFF5"
-            },
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "geometry.stroke",
-        "stylers": [
-            {
-                "color": "#808080"
-            },
-            {
-                "lightness": 54
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#dde1d4"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#73AB7D"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.fill",
-        "stylers": [
-            {
-                "color": "#767676"
-            }
-        ]
-    },
-    {
-        "featureType": "road",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "color": "#7e7341"
-            }
-        ]
-    },
-    
-    {
-        "featureType": "landscape.natural",
-        "elementType": "geometry.fill",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#dee6e6"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.park",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.sports_complex",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.medical",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "poi.business",
-        "stylers": [
-            {
-                "visibility": "simplified"
-            }
-        ]
-    }
-]
-
-});
-
-var myLatlng;
-var marker, i;
-var bounds = new google.maps.LatLngBounds();
-var infowindow = new google.maps.InfoWindow({ content: "loading..." });
-
-for (i = 0; i < locations.length; i++) { 
-
-
-    if(locations[i][2] !== undefined && locations[i][3] !== undefined){
-        var content = '<div class="infoWindow">'+locations[i][0]+'<br>'+locations[i][1]+'</div>';
-        (function(content) {
-            myLatlng = new google.maps.LatLng(locations[i][2], locations[i][3]);
-
-            marker = new google.maps.Marker({
-                position: myLatlng,
-                icon:image,  
-                title: overlayTitle,
-                map: map
-            });
-
-            google.maps.event.addListener(marker, 'click', (function() {
-                return function() {
-                    infowindow.setContent(content);
-                    infowindow.open(map, this);
-                };
-
-            })(this, i));
-
-            if(locations.length > 1){
-                bounds.extend(myLatlng);
-                map.fitBounds(bounds);
-            }else{
-                map.setCenter(myLatlng);
-            }
-
-        })(content);
-    }else{
-
-        var geocoder   = new google.maps.Geocoder();
-        var info   = locations[i][0];
-        var addr   = locations[i][1];
-        var latLng = locations[i][1];
-
-        (function(info, addr) {
-
-            geocoder.geocode( {
-
-                'address': latLng
-
-            }, function(results) {
-
-                myLatlng = results[0].geometry.location;
-
-                marker = new google.maps.Marker({
-                    position: myLatlng,
-                    icon:image,  
-                    title: overlayTitle,
-                    map: map
-                });
-                var $content = '<div class="infoWindow">'+info+'<br>'+addr+'</div>';
-                google.maps.event.addListener(marker, 'click', (function() {
-                    return function() {
-                        infowindow.setContent($content);
-                        infowindow.open(map, this);
-                    };
-                })(this, i));
-
-                if(locations.length > 1){
-                    bounds.extend(myLatlng);
-                    map.fitBounds(bounds);
-                }else{
-                    map.setCenter(myLatlng);
-                }
-            });
-        })(info, addr);
-
-    }
-}
-}
-
-
-
-
-
-
-/* ANALYTICS */
-function gaSSDSLoad (acct) {
-  "use strict";  
-  var gaJsHost = (("https:" === document.location.protocol) ? "https://ssl." : "http://www."),
-  pageTracker,
-  s;
-  s = document.createElement('script');
-  s.src = gaJsHost + 'google-analytics.com/ga.js';
-  s.type = 'text/javascript';
-  s.onloadDone = false;
-  function init () {
-    pageTracker = _gat._getTracker(acct);
-    pageTracker._trackPageview();
-}
-s.onload = function () {
-    s.onloadDone = true;
-    init();
-};
-s.onreadystatechange = function() {
-    if (('loaded' === s.readyState || 'complete' === s.readyState) && !s.onloadDone) {
-      s.onloadDone = true;
-      init();
-  }
-};
-document.getElementsByTagName('head')[0].appendChild(s);
-}
+//
+// function initialize(id) {
+//     "use strict";
+//     var image = 'images/icon-map.png';
+//
+//     var overlayTitle = 'Agencies';
+//
+//     var locations = [
+//         //point number 1
+//         ['Madison Square Garden', '4 Pennsylvania Plaza, New York, NY'],
+//
+//         //point number 2
+//         ['Best town ever', 'Santa Cruz', 36.986021, -122.02216399999998],
+//
+//         //point number 3
+//         ['Located in the Midwestern United States', 'Kansas'],
+//
+//         //point number 4
+//         ['I\'ll definitly be there one day', 'Chicago', 41.8781136, -87.62979819999998]
+//     ];
+//
+// /*** DON'T CHANGE ANYTHING PASSED THIS LINE ***/
+// id = (id === undefined) ? 'mapWrapper' : id;
+//
+// var map = new google.maps.Map(document.getElementById(id), {
+//     mapTypeId: google.maps.MapTypeId.ROADMAP,
+//     scrollwheel: false,
+//     zoomControl: true,
+//     zoomControlOptions: {
+//         style: google.maps.ZoomControlStyle.LARGE,
+//         position: google.maps.ControlPosition.LEFT_CENTER
+//     },
+//     streetViewControl:true,
+//     scaleControl:false,
+//     zoom: 14,
+//      styles:[
+//     {
+//         "featureType": "water",
+//         "stylers": [
+//             {
+//                 "color": "#6196AD"
+//             },
+//         ]
+//     },
+//     {
+//         "featureType": "road",
+//         "elementType": "geometry.fill",
+//         "stylers": [
+//              {
+//                 "color": "#FCFFF5"
+//             },
+//         ]
+//     },
+//     {
+//         "featureType": "road",
+//         "elementType": "geometry.stroke",
+//         "stylers": [
+//             {
+//                 "color": "#808080"
+//             },
+//             {
+//                 "lightness": 54
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "landscape.man_made",
+//         "elementType": "geometry.fill",
+//         "stylers": [
+//             {
+//                 "color": "#dde1d4"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "poi.park",
+//         "elementType": "geometry.fill",
+//         "stylers": [
+//             {
+//                 "color": "#73AB7D"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "road",
+//         "elementType": "labels.text.fill",
+//         "stylers": [
+//             {
+//                 "color": "#767676"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "road",
+//         "elementType": "labels.text.stroke",
+//         "stylers": [
+//             {
+//                 "color": "#ffffff"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "road.highway",
+//         "elementType": "geometry.fill",
+//         "stylers": [
+//             {
+//                 "color": "#7e7341"
+//             }
+//         ]
+//     },
+//
+//     {
+//         "featureType": "landscape.natural",
+//         "elementType": "geometry.fill",
+//         "stylers": [
+//             {
+//                 "visibility": "on"
+//             },
+//             {
+//                 "color": "#dee6e6"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "poi.park",
+//         "stylers": [
+//             {
+//                 "visibility": "on"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "poi.sports_complex",
+//         "stylers": [
+//             {
+//                 "visibility": "on"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "poi.medical",
+//         "stylers": [
+//             {
+//                 "visibility": "on"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "poi.business",
+//         "stylers": [
+//             {
+//                 "visibility": "simplified"
+//             }
+//         ]
+//     }
+// ]
+//
+// });
+//
+// var myLatlng;
+// var marker, i;
+// var bounds = new google.maps.LatLngBounds();
+// var infowindow = new google.maps.InfoWindow({ content: "loading..." });
+//
+// for (i = 0; i < locations.length; i++) {
+//
+//
+//     if(locations[i][2] !== undefined && locations[i][3] !== undefined){
+//         var content = '<div class="infoWindow">'+locations[i][0]+'<br>'+locations[i][1]+'</div>';
+//         (function(content) {
+//             myLatlng = new google.maps.LatLng(locations[i][2], locations[i][3]);
+//
+//             marker = new google.maps.Marker({
+//                 position: myLatlng,
+//                 icon:image,
+//                 title: overlayTitle,
+//                 map: map
+//             });
+//
+//             google.maps.event.addListener(marker, 'click', (function() {
+//                 return function() {
+//                     infowindow.setContent(content);
+//                     infowindow.open(map, this);
+//                 };
+//
+//             })(this, i));
+//
+//             if(locations.length > 1){
+//                 bounds.extend(myLatlng);
+//                 map.fitBounds(bounds);
+//             }else{
+//                 map.setCenter(myLatlng);
+//             }
+//
+//         })(content);
+//     }else{
+//
+//         var geocoder   = new google.maps.Geocoder();
+//         var info   = locations[i][0];
+//         var addr   = locations[i][1];
+//         var latLng = locations[i][1];
+//
+//         (function(info, addr) {
+//
+//             geocoder.geocode( {
+//
+//                 'address': latLng
+//
+//             }, function(results) {
+//
+//                 myLatlng = results[0].geometry.location;
+//
+//                 marker = new google.maps.Marker({
+//                     position: myLatlng,
+//                     icon:image,
+//                     title: overlayTitle,
+//                     map: map
+//                 });
+//                 var $content = '<div class="infoWindow">'+info+'<br>'+addr+'</div>';
+//                 google.maps.event.addListener(marker, 'click', (function() {
+//                     return function() {
+//                         infowindow.setContent($content);
+//                         infowindow.open(map, this);
+//                     };
+//                 })(this, i));
+//
+//                 if(locations.length > 1){
+//                     bounds.extend(myLatlng);
+//                     map.fitBounds(bounds);
+//                 }else{
+//                     map.setCenter(myLatlng);
+//                 }
+//             });
+//         })(info, addr);
+//
+//     }
+// }
+// }
+//
+//
+//
+//
+//
+//
+// /* ANALYTICS */
+// function gaSSDSLoad (acct) {
+//   "use strict";
+//   var gaJsHost = (("https:" === document.location.protocol) ? "https://ssl." : "http://www."),
+//   pageTracker,
+//   s;
+//   s = document.createElement('script');
+//   s.src = gaJsHost + 'google-analytics.com/ga.js';
+//   s.type = 'text/javascript';
+//   s.onloadDone = false;
+//   function init () {
+//     pageTracker = _gat._getTracker(acct);
+//     pageTracker._trackPageview();
+// }
+// s.onload = function () {
+//     s.onloadDone = true;
+//     init();
+// };
+// s.onreadystatechange = function() {
+//     if (('loaded' === s.readyState || 'complete' === s.readyState) && !s.onloadDone) {
+//       s.onloadDone = true;
+//       init();
+//   }
+// };
+// document.getElementsByTagName('head')[0].appendChild(s);
+// }
 
 
 /** FULLSCREEN IMAGE **/
@@ -1277,7 +1275,7 @@ document.getElementsByTagName('head')[0].appendChild(s);
 function fullscreenImage(){
 
           $('#homeFullScreen').css({height:$(window).height()})
-          
+
       }
 
 $(window).on("resize",function(e){
@@ -1286,14 +1284,5 @@ $(window).on("resize",function(e){
             {
                 fullscreenImage();
             }
-    
+
 });
-
-         
-
-
-
-
-
-
-
