@@ -13,8 +13,22 @@
   background-color:rgba(194, 130, 79,.7) !important;
 }
 
+.slides h2 {
+  font-size: 20px;
+}
+
+.flex-control-paging {
+  display:none;
+}
+
 blockquote {
   font-size:250%;
+}
+
+.welcome-text {
+  font-family: 'Open Sans',sans-serif;
+  color: white;
+  font-size:350%;
 }
 
 #home, #paralaxSlice1, #paralaxSlice2, #paralaxSlice3, #paralaxSlice4 {
@@ -64,8 +78,25 @@ blockquote {
     h3 {
       font-size:16px;
     }
+    .welcome-text {
+      font-size:250%;
+    }
 }
 
+@media (max-width: 400px) {
+  #flexHome h2 {
+      font-size: 14px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 439px) {
+  .welcome-text {
+    font-size:300%;
+  }
+  #flexHome h2 {
+      font-size: 16px;
+  }
+}
 
 @media (min-width: 375px) and (max-width: 400px) {
   h1 {
