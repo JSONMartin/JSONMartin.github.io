@@ -17,6 +17,43 @@ blockquote {
   font-size:250%;
 }
 
+#home, #paralaxSlice1, #paralaxSlice2, #paralaxSlice3, #paralaxSlice4 {
+	background-color:#C2824F;
+}
+#home {
+	background-image:url('../images/theme-pics/paralax-orange-3.jpg');
+}
+#paralaxSlice1 {
+	background-image: url('../images/zen.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+#paralaxSlice2 {
+	background-image: url('../images/zen.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+#paralaxSlice3 {
+	background-image: url('../images/zen.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+#paralaxSlice4 {
+	background-image: url('../images/zen.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+#paralaxSlice5 {
+	background-image:  url('../images/idea_on_the_horizon.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+}
+
+#homeFullScreen {
+    background-image: url('../images/beard.jpg');
+}
+
 @media (min-width: 0px) and (max-width: 374px) {
     h1 {
       font-size:34px;
