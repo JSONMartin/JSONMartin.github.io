@@ -70,7 +70,7 @@ blockquote {
 
 @media (min-width: 0px) and (max-width: 374px) {
     h1 {
-      font-size:34px;
+      font-size:32px;
     }
     blockquote {
       font-size:200%;
