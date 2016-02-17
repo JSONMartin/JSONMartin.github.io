@@ -1,0 +1,37 @@
+.development-image {
+  width:100%;
+}
+
+.victory {
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:10px;
+}
+
+/* Style overrides */
+.mask {
+  background-color:rgba(194, 130, 79,.7) !important;
+}
+
+blockquote {
+  font-size:250%;
+}
+
+@media (min-width: 0px) and (max-width: 374px) {
+    h1 {
+      font-size:34px;
+    }
+    blockquote {
+      font-size:200%;
+    }
+    h3 {
+      font-size:16px;
+    }
+}
+
+
+@media (min-width: 375px) and (max-width: 400px) {
+  h1 {
+    font-size:40px;
+  }
+}

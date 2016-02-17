@@ -36,6 +36,7 @@
 		<!-- Custom css -->
 		<link type="text/css" rel="stylesheet" href="css/layout.css">
 		<link type="text/css" id="colors" rel="stylesheet" href="css/coffee.css">
+		<link type="text/css" rel="stylesheet" href="css/custom.css">
 		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 		<script src="js/modernizr-2.6.1.min.js"></script>
 		<!-- Favicons
@@ -45,12 +46,6 @@
 		<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 		<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
-		<style>
-			/* Style overrides */
-			.mask {
-				background-color:rgba(194, 130, 79,.7) !important;
-			}
-		</style>
 	</head>
 	<body data-spy="scroll" data-target="#scrollTarget" data-offset="150" id="fullScreen">
 		<!-- Preloader -->
@@ -124,7 +119,7 @@
 						</div>
 
 						<div class="row">
-							<div class="col-sm-4"> <img src="images/victory.jpg" alt="services" class="img-responsive img-rounded"> </div>
+							<div class="col-sm-4" style="margin-bottom:5px;"> <img src="images/victory.jpg" alt="services" class="img-responsive img-rounded img-victory"> </div>
 							<div class="col-sm-4">
 								<h2>A brief synopsis</h2>
 								<p>Hi! My name is Jason, and I live at the intersection of technology and humanity. I'm an <a href="#works">app creator</a>, <a href="http://www.hackreactor.com" target="_blank">software engineer</a>, <a href="http://www.bulletproofexec.com" target="_blank">biohacker</a>, <a href="http://flight.do" target="_blank">productivity ninja</a>, and <a href="https://nomadlist.com/" target="_blank">intrepid traveller</a>. I architect apps and create clean functional software, while also training Martial Arts, studying nutrition and biochemistry, having adventures, and pushing the boundaries of what it means to be human...all while growing and learning as much as possible!</p>
@@ -144,7 +139,7 @@
 					<div class="maskParent">
 						<div class="paralaxMask"></div>
 						<div class="paralaxText container">
-							<blockquote class="bigTitle" style="font-size: 250%">Practice until it becomes boring, then practice until it becomes beautiful.</blockquote>
+							<blockquote class="bigTitle">Practice until it becomes boring, then practice until it becomes beautiful.</blockquote>
 						</div>
 					</div>
 				</div>
@@ -163,7 +158,7 @@
 							<div class="col-sm-6">
 								<div class="row boxFeature">
 									<div class="col-xs-3">
-										<img src = "images/javascript_logo.png" width="96px">
+										<img src = "images/javascript_logo.png" class="development-image">
 									</div>
 									<div class="col-xs-9">
 										<h2>Javascript</h2>
@@ -175,7 +170,7 @@
 							<div class="col-sm-6">
 								<div class="row boxFeature">
 									<div class="col-xs-3">
-										<img src = "images/RubyOnRails.png" width="96px">
+										<img src = "images/RubyOnRails.png" class="development-image">
 									</div>
 									<div class="col-xs-9">
 										<h2>Ruby on Rails</h2>
@@ -189,7 +184,7 @@
 							<div class="col-sm-6">
 								<div class="row boxFeature">
 									<div class="col-xs-3">
-										<img src = "images/HTML5_Logo_256.png" width="96px">
+										<img src = "images/HTML5_Logo_256.png" class="development-image">
 									</div>
 									<div class="col-xs-9">
 										<h2>HTML5 &amp; CSS3</h2>
@@ -201,7 +196,7 @@
 							<div class="col-sm-6">
 								<div class="row boxFeature">
 									<div class="col-xs-3">
-										<img src = "images/php_logo.png" width="96px">
+										<img src = "images/php_logo.png" class="development-image">
 									</div>
 									<div class="col-xs-9">
 										<h2>PHP</h2>
@@ -215,7 +210,7 @@
 							<div class="col-sm-6">
 								<div class="row boxFeature">
 									<div class="col-xs-3">
-										<img src = "images/database_icon.png" width="96px">
+										<img src = "images/database_icon.png" class="development-image">
 									</div>
 									<div class="col-xs-9">
 										<h2>Application Architecting</h2>
@@ -226,7 +221,7 @@
 							<div class="col-sm-6">
 								<div class="row boxFeature">
 									<div class="col-xs-3">
-										<img src = "images/responsive-website-design.png" width="96px">
+										<img src = "images/responsive-website-design.png" class="development-image">
 									</div>
 									<div class="col-xs-9">
 										<h2>Responsive Website and App Design</h2>
@@ -244,7 +239,6 @@
 						<div class="maskParent">
 							<div class="paralaxMask"></div>
 							<div class="paralaxText">
-								<i class="icon-star iconBig"></i>
 								<blockquote class="mt15">
 										When you do something, you should burn yourself up completely, like a good bonfire, leaving no trace of yourself.<br/><small>Shunryu Suzuki-roshi </small></blockquote>
 							</div>
