@@ -65,7 +65,8 @@ blockquote {
 }
 
 #homeFullScreen {
-    background-image: url('../images/beard.jpg');
+    /*background-image: url('../images/beard.jpg');*/
+    background-image: url('../images/me_beach_background_compressed.jpg');
 }
 
 @media (min-width: 0px) and (max-width: 374px) {
